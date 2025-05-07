@@ -1,0 +1,8 @@
+0	2034	"chorus A"
+2034	4049	"chorus B"
+4049	5016	"nothing"
+5016	6192	"nothing"
+6192	8521	"chorus C"
+8521	9512	"nothing"
+9512	10505	"nothing"
+10505	11421	"nothing"

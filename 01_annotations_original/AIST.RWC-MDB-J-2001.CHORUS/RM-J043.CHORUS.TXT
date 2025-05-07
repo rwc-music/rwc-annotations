@@ -1,0 +1,18 @@
+101	1686	"nothing"
+1686	3260	"chorus A"
+3260	4823	"chorus B"
+4823	6401	"chorus A"	(+12)
+6401	7957	"chorus B"	(+12)
+7957	9538	"nothing"
+9538	11118	"nothing"
+11118	12694	"nothing"
+12694	14277	"nothing"
+14277	15864	"nothing"
+15864	17449	"nothing"
+17449	19027	"nothing"
+19027	20615	"nothing"
+20615	22208	"chorus A"
+22208	23801	"chorus B"
+23801	25381	"chorus A"	(+12)
+25381	26968	"chorus B"	(+12)
+26968	29389	"nothing"
