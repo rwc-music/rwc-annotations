@@ -93,7 +93,7 @@ if __name__ == "__main__":
     ]
 
     SAVE_DIR = [
-        repo_root / '02_annotations_preprocessed' / f"AIST.RWC-MDB-{cur_coll}-2001.BEAT"
+        repo_root / '02_annotations_preprocessed' / f"AIST_RWC-MDB-{cur_coll}-2001_BEAT"
         for cur_coll in collections
     ]
 
@@ -131,7 +131,7 @@ if __name__ == "__main__":
             df = process_beat_annotation(df)
 
             # Save path
-            output_name = cur_anno.stem + ".TXT"
+            output_name = cur_anno.stem + ".csv"
             output_path = cur_save / output_name
             df[["start", "BeatNumber"]].to_csv(output_path, sep="\t", index=False, header=False)
 
