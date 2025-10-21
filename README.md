@@ -1,7 +1,12 @@
 # RWC 2.0 Annotations
 
-RWC 2.0 is a re-release of the original RWC dataset under a Creative Commons license (Goto et al., 2002).
+RWC 2.0 is a re-release of the original RWC dataset under a Creative Commons license (Goto et al., 2002). This repository collects curated annotations for RWC 2.0 that satisfy the following requirements:
 
+- Annotation filenames are consistent with the released audio files (e.g., matching base names).
+- Annotation formats are simple, easy to parse, and well documented — units are explicit (for example, beat times given in seconds).
+- Each annotation type includes a README describing the format: column meanings, units, example files, and any conversion notes.
+
+Contributions are welcome. To propose fixes or additions, please open an issue describing the change or submit a pull request with your proposed updates.
 
 ## Repository Structure
 
@@ -11,10 +16,11 @@ RWC 2.0 is a re-release of the original RWC dataset under a Creative Commons lic
 
 ### 02_annotations_derived
 
-## License
-
-This project is licensed under the **CC BY-NC 4.0** - see the [LICENSE](./LICENSE) file for details.
-
+There is certainly no file format for all possible applications.
+Some applications require specific file format, e.g, it is easier to use JSON files in web applications.
+In `01_annotations_preprocessed`, we decided to use very simple file formats as we think that converting to a more complex
+format from this will always be possible through suitable scripts.
+In `02_annotations_derived`, we collect conversion scripts and the converted annotations in various formats.
 
 ## Bibliography
 
@@ -53,6 +59,10 @@ For the sake of reproducibility, please make sure to cite the original publicati
   pages     = {359--360},
 }
 ```
+
+## License
+
+This project is licensed under the **CC BY-NC 4.0** - see the [LICENSE](./LICENSE) file for details.
 
 ## Acknowledgements
 
