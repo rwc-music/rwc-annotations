@@ -1,17 +1,26 @@
-# RWC 2.0
+# RWC 2.0 Annotations
+
+RWC 2.0 is a re-release of the original RWC dataset under a Creative Commons license (Goto et al., 2002).
 
 
-## :computer: Installation and Setup
+## Repository Structure
 
-- Data on Zenodo
-- Annotations on GitHub
+### 01_annotations_preprocessed
+
+
+
+### 02_annotations_derived
 
 ## License
 
-This project is licensed under the **CC BY-NC-SA 4.0** - see the [LICENSE](./LICENSE) file for details.
+This project is licensed under the **CC BY-NC 4.0** - see the [LICENSE](./LICENSE) file for details.
 
 
 ## Bibliography
+
+We provide a list of central publications on the legacy of the RWC dataset.
+However, annotations for this dataset may have been presented in other publications.
+For the sake of reproducibility, please make sure to cite the original publications.
 
 ```bibtex
 @inproceedings{GotoHNO02_RWC_ISMIR,
@@ -50,4 +59,6 @@ This project is licensed under the **CC BY-NC-SA 4.0** - see the [LICENSE](./LIC
 The creation of the original RWC was by Masataka Goto in 2001. All credits for the creation belong to him.
 He was supported by experts in the field who played an important role to make the RWC reality.
 
-For the release of RWC 2.0, Meinard Müller and Stefan Balke were supported by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under grant number 500643750 (MU 2686/15-1). The [International Audio Laboratories Erlangen](https://audiolabs-erlangen.de) are a joint institution of the [Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)](https://www.fau.eu) and [Fraunhofer Institute for Integrated Circuits IIS](https://www.iis.fraunhofer.de/en.html).
+For the release of RWC 2.0, Meinard Müller and Stefan Balke were supported by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation)
+under grant number 500643750 (MU 2686/15-1). The [International Audio Laboratories Erlangen](https://audiolabs-erlangen.de) are a joint
+institution of the [Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)](https://www.fau.eu) and [Fraunhofer Institute for Integrated Circuits IIS](https://www.iis.fraunhofer.de/en.html).
