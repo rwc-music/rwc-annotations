@@ -1,4 +1,6 @@
-# History
+# RWC Beat Annotations
+
+## History
 
 - Basis are the AIST annotations
 - 2025/10: (Stefan Balke and Arda Özgün)
@@ -7,3 +9,9 @@
     - Both versions were sonified and quality checked
     - If differences arose, we created a new pull request per track
     - Per track, we either decided completely for the new or original annotation, merged both, and/or corrected the results
+
+## Format Specification
+
+- tab-separated file
+- Column 1: Beat positions in seconds
+- Column 2: Downbeat information
