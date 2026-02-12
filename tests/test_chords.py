@@ -5,13 +5,18 @@ import pytest
 CHORDS_DIR = Path("01_annotations_preprocessed") / "chords"
 CHORD_FILES = sorted(CHORDS_DIR.rglob("*.csv"))  # change to *.lab if needed
 
+
 def test_chords_folder_exists():
     assert CHORDS_DIR.exists(), f"chords folder not found: {CHORDS_DIR}"
+
 
 def test_chord_files_exist():
     assert CHORD_FILES, f"No chord files found under: {CHORDS_DIR}"
 
-@pytest.mark.parametrize("csv_path", CHORD_FILES, ids=lambda p: str(p.relative_to(CHORDS_DIR)))
+
+@pytest.mark.parametrize(
+    "csv_path", CHORD_FILES, ids=lambda p: str(p.relative_to(CHORDS_DIR))
+)
 def test_chords_have_3_columns_and_nonempty(csv_path: Path):
     """
     Checks ONLY structure:
@@ -25,7 +30,10 @@ def test_chords_have_3_columns_and_nonempty(csv_path: Path):
     assert df.shape[1] == 3, f"{csv_path} has {df.shape[1]} columns, expected 3"
     assert len(df) > 0, f"{csv_path} has no rows"
 
-@pytest.mark.parametrize("csv_path", CHORD_FILES, ids=lambda p: str(p.relative_to(CHORDS_DIR)))
+
+@pytest.mark.parametrize(
+    "csv_path", CHORD_FILES, ids=lambda p: str(p.relative_to(CHORDS_DIR))
+)
 def test_chords_time_values_plausible(csv_path: Path):
     df = pd.read_csv(csv_path, sep=";")  # <-- header is used
 
