@@ -6,8 +6,8 @@ More annotations are available in the archive repository: https://github.com/rwc
 
 | Subset | Annotations (Archive) | Annotations (Pre-processed, this repository) |
 |-------------------|---------|---------|
-| RWC-P | MIDI (aligned), Chords, Beats, Structure, Melody (F0), Lyrics, Vocal and instrumental activity segments | Beats, Chords |
-| RWC-R | MIDI (aligned), Beats, Structure, Lyrics | Beats |
+| RWC-P | MIDI (aligned), Chords, Beats, Tempo, Structure, Melody (F0), Lyrics, Vocal and instrumental activity segments | Beats, Chords |
+| RWC-R | MIDI (aligned), Beats, Tempo, Structure, Lyrics | Beats |
 | RWC-C | MIDI (unaligned), MIDI (aligned), Beats, Structure, Lyrics | Beats |
 | RWC-J | MIDI (aligned), Beats, Structure, Lyrics | Beats |
 | RWC-G | MIDI (aligned), Beats, Structure, Lyrics | Beats |
@@ -16,7 +16,7 @@ Contributions are welcome. To propose fixes or additions, please open an issue d
 
 ## Repository Structure
 
-### 01_annotations_preprocessed
+### 📂 01_annotations_preprocessed/
 
 In `01_annotations_preprocessed/`, we collect annotations that satisfy the following requirements:
 
@@ -24,7 +24,7 @@ In `01_annotations_preprocessed/`, we collect annotations that satisfy the follo
 - Annotation formats are simple, easy to parse, and well documented — units are explicit (for example, beat times given in seconds).
 - Each annotation type includes a README describing the format: column meanings, units, example files, and any conversion notes.
 
-### 02_annotations_derived
+### 📂 02_annotations_derived/
 
 There is certainly no file format for all possible applications.
 Some applications require specific file format, e.g, it is easier to use JSON files in web applications.
@@ -32,11 +32,16 @@ In `01_annotations_preprocessed/`, we decided to use very simple file formats as
 format from this will always be possible through suitable scripts.
 In `02_annotations_derived/`, we collect conversion scripts and the converted annotations in various formats.
 
-## Data Integrity Test
+### 📄 metadata.csv
+
+Contains textual metadata on the tracks including tempo information (where available) and genre information.
+Furthermore, it provides manually created annotations for the music start and ending for each track.
+
+## 🧪 Data Integrity Test
 
 We use `pytest` to check for common errors in the annotations files. Simple tests check for formatting issues (e.g., check for the expected number of columns in the CSV), more advanced tests check for annotation errors (e.g., subsequent beats are wrongly numbered). These tests are running after each push to the repository.
 
-## Bibliography
+## 📜 Bibliography
 
 We provide a list of central publications on the legacy of the RWC dataset.
 However, annotations for this dataset may have been presented in other publications.
@@ -74,15 +79,15 @@ For the sake of reproducibility, please make sure to cite the original publicati
 }
 ```
 
-## License
+## ⚖️ License
 
 This project is licensed under the **CC BY-NC 4.0** - see the [LICENSE](./LICENSE) file for details.
 
-## Acknowledgements
+## 🙇🏻‍♀️ Acknowledgements
 
 The creation of the original RWC was by Masataka Goto in 2001. All credits for the creation belong to him.
 He was supported by experts in the field who played an important role to make the RWC reality.
 
-For the release of RWC 2.0, Meinard Müller and Stefan Balke were supported by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation)
+For the release of RWC 2.0, Stefan Balke, Johannes Zeitler, Vlora Arifi-Müller, and Meinard Müller were supported by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation)
 under grant number 500643750 (MU 2686/15-1). The [International Audio Laboratories Erlangen](https://audiolabs-erlangen.de) are a joint
 institution of the [Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)](https://www.fau.eu) and [Fraunhofer Institute for Integrated Circuits IIS](https://www.iis.fraunhofer.de/en.html).
