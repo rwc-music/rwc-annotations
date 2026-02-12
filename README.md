@@ -2,7 +2,9 @@
 
 RWC 2.0 is a re-release of the original RWC dataset under a Creative Commons license (Goto et al., 2002). This repository collects curated annotations for RWC 2.0!
 
-More annotations are available in the archive repository: https://github.com/rwc-music/rwc-annotations-archive.
+The corresponding audio recordings are available online: https://zenodo.org/records/17177919.
+
+More (possibly uncurated) annotations are available in the archive repository: https://github.com/rwc-music/rwc-annotations-archive. The following table gives an overview of available and curated annotations:
 
 | Subset | Annotations (Archive) | Annotations (Pre-processed, this repository) |
 |-------------------|---------|---------|
