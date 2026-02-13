@@ -8,11 +8,11 @@ More (possibly uncurated) annotations are available in the archive repository: h
 
 | Subset | Annotations (Archive) | Annotations (Pre-processed, this repository) |
 |-------------------|---------|---------|
-| RWC-P | MIDI (aligned), Chords, Beats, Tempo, Structure, Melody (F0), Lyrics, Vocal and instrumental activity segments | Beats, Chords |
-| RWC-R | MIDI (aligned), Beats, Tempo, Structure, Lyrics | Beats |
-| RWC-C | MIDI (unaligned), MIDI (aligned), Beats, Structure, Lyrics | Beats |
-| RWC-J | MIDI (aligned), Beats, Structure, Lyrics | Beats |
-| RWC-G | MIDI (aligned), Beats, Structure, Lyrics | Beats |
+| RWC-P | MIDI (aligned), Chords, Beats, Tempo, Structure, Melody (F0), Lyrics, Vocal and instrumental activity segments | MIDI (aligned), Beats, Chords |
+| RWC-R | MIDI (aligned), Beats, Tempo, Structure, Lyrics | BMIDI (aligned), eats |
+| RWC-C | MIDI (unaligned), MIDI (aligned), Beats, Structure, Lyrics | MIDI (aligned), Beats |
+| RWC-J | MIDI (aligned), Beats, Structure, Lyrics | MIDI (aligned), Beats |
+| RWC-G | MIDI (aligned), Beats, Structure, Lyrics | MIDI (aligned), Beats |
 
 Contributions are welcome. To propose fixes or additions, please open an issue describing the change or submit a pull request with your proposed updates.
 
