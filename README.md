@@ -16,6 +16,9 @@ More (possibly uncurated) annotations are available in the archive repository: h
 
 Contributions are welcome. To propose fixes or additions, please open an issue describing the change or submit a pull request with your proposed updates.
 
+Details on the updated annotations and the underlying process can be found in the following publication:
+https://transactions.ismir.net/articles/10.5334/tismir.326
+
 ## Repository Structure
 
 ### 📂 01_annotations_preprocessed/
@@ -78,6 +81,19 @@ For the sake of reproducibility, please make sure to cite the original publicati
   booktitle = {Proceedings of the International Society for Music Information Retrieval Conference ({ISMIR})},
   year      = {2006},
   pages     = {359--360},
+}
+```
+
+```bibtex
+@article{BalkeZAMTGM26_RWCRevisited_TISMIR,
+   author = {Stefan Balke and Johannes Zeitler and Vlora Arifi-Müller and Brian McFee and Tomoyasu Nakano and Masataka Goto and Meinard M{\"u}ller},
+   title = {{RWC} Revisited: {T}owards a Community-Driven {MIR} Corpus},
+   journal = {Transactions of the International Society for Music Information Retrieval},
+   volume = {9},
+   issue = {1},
+   pages = {21--35},
+   year = {2026},
+   doi = {10.5334/tismir.326}
 }
 ```
 
