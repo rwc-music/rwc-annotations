@@ -5,6 +5,10 @@ import pytest
 BEATS_DIR = Path("01_annotations_preprocessed") / "beats"
 BEAT_FILES = sorted(BEATS_DIR.rglob("*.csv"))
 
+META_PATH = Path("metadata.csv")
+META = pd.read_csv(META_PATH, sep=";") if META_PATH.exists() else None
+
+TOL = 0.05  # 50 ms tolerance
 
 def test_beats_folder_exists():
     assert BEATS_DIR.exists(), f"beats folder not found: {BEATS_DIR}"
@@ -97,3 +101,41 @@ def test_beat_order_plus_one_or_reset_to_one(csv_path: Path):
             f"prev={beat.iloc[i-1]}, current={beat.iloc[i]} "
             f"(allowed: prev+1 or 1)"
         )
+
+
+@pytest.mark.parametrize(
+    "csv_path", BEAT_FILES, ids=lambda p: str(p.relative_to(BEATS_DIR))
+)
+def test_beats_within_audio_region(csv_path: Path):
+    if META is None:
+        pytest.skip("metadata.csv not found")
+
+    stem = csv_path.stem  # e.g. RWC_C023B
+
+    row = META[META["RWCID"].astype(str).str.strip() == stem]
+
+    assert not row.empty, f"{csv_path} not found in metadata.csv"
+
+    row = row.iloc[0]
+
+    if pd.isna(row["audio_start"]) or pd.isna(row["audio_end"]):
+        pytest.skip(f"{stem}: no audio_start/audio_end annotated")
+
+    audio_start = float(row["audio_start"])
+    audio_end = float(row["audio_end"])
+
+    df = pd.read_csv(csv_path, sep=";")
+    t = pd.to_numeric(df["t"], errors="coerce")
+
+    assert t.notna().all(), f"{csv_path} has non-numeric t values"
+
+    t_min = float(t.min())
+    t_max = float(t.max())
+
+    assert t_min >= audio_start - TOL, (
+        f"{csv_path}: first beat {t_min:.3f}s before audio_start {audio_start:.3f}s"
+    )
+
+    assert t_max <= audio_end + TOL, (
+        f"{csv_path}: last beat {t_max:.3f}s after audio_end {audio_end:.3f}s"
+    )
